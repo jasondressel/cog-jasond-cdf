@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "cdf"
+version = "0.1.0"
+description = ""
+authors = ["Jason Dressel <jason.dressel@cognite.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+msal = "^1.21.0"
+cognite-sdk = "^5.7.2"
+cognite-sdk-experimental = "^0.110.0"
+cognite-extractor-utils = "^4.1.0"
+cognite-wells-sdk = "^0.18.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.21.3"
+flake8 = "^6.0.0"
+black = {version = "^23.1.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

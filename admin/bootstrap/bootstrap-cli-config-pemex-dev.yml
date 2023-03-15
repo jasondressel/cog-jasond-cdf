@@ -1,0 +1,170 @@
+---
+bootstrap:
+  # This is a template bootstrap CLI file that will need to be completed. For a more complete example look at
+  # https://github.com/cognitedata/inso-bootstrap-cli/blob/main/configs/config-deploy-example-v2.yml
+
+    features:
+    # v2 adding as features, available as cli paramaters only atm (v1)
+    # allowed values are parsed case-insensitive: [true|yes|YES|..] or [false|no|NO|..]
+    # not as strings in quotes "yes" or 'yes'
+
+    # default and recommended is: false
+    #   in CDF 2022 support for this special-groups is not necessary anymore
+    #   check 'bootstrap-cli deploy --help' for more info
+        with-special-groups: false
+
+    # default and recommended is: true
+        with-raw-capability: true
+
+    # new in v2 to configure prior (v1) hard-coded naming elements
+    # Most of the naming-configurations don't have a functional effect, but affect
+    # naming of Groups, Datasets and RAWDBs only.
+    # All given feature values are reflecting the default values,
+    # to support a smooth v1 migration.
+    #
+    # Recommended values for a new v2-project are given as comments!
+
+
+    # default is: allprojects
+    #   recommended is shorter: 'all'
+        aggregated-level-name: all
+
+    # default and recommended is: cdf
+    #   supports empty-string ''
+        group-prefix: cdf
+
+    # default is: dataset
+    #  recommended is shorter 'ds' or minimal ''
+    #   supports empty-string ''
+        dataset-suffix: dataset
+
+    # default is: rawdb
+    #  recommended is shorter 'db' or minimal ''
+        rawdb-suffix: rawdb
+
+    # default is" ['state']
+    #   meant for separating the statestores from extractors from ingested data
+    #   recommended: keep it or []
+    #   more rawdbs can be configured at a later stage
+    #   supports empty list [] for no additional variants
+#  #     rawdb-additional-variants:
+      # provide more than one rawdb per ns-nodes
+      # atm (v1) hardcoded is one additional rawdb
+#   #         - state
+
+    # Mapping between IDP (Azure Active Directory) groups and CDF groups.
+    idp-cdf-mappings:
+    # Support multiple CDF Projects, like dev/test/prod in one config.
+        - cdf-project: pemex-dev
+          mappings:
+             #cdf root
+            - cdf-group: cdf:root
+              idp-source-name: cdf-root
+              idp-source-id: b38a5316-10a3-44c4-907c-03b88d91c51e
+             #cdf all
+            - cdf-group: cdf:all:owner
+              idp-source-id: 7059ad21-3d09-41e6-a526-2764ec492acc
+              idp-source-name: cdf-all-owner
+            - cdf-group: cdf:all:read
+              idp-source-name: cdf-all-read
+              idp-source-id: 55b297bd-b7b0-49f5-a945-978275342014
+              #cdf timeseries
+            - cdf-group: cdf:bsee:timeseries:owner
+              idp-source-name: cdf-bsee-timeseries-owner
+              idp-source-id: 3089ee9b-ddee-41b5-82ca-347becf1e99a
+            - cdf-group: cdf:bsee:timeseries:read
+              idp-source-name: cdf-bsee-timeseries-read
+              idp-source-id: 2f62543d-a43d-4e6a-be1b-85b19c3ffc82
+              #bsee
+            - cdf-group: cdf:bsee:all:read
+              idp-source-name: cdf-bsee-all-read
+              idp-source-id: bd080869-8cd1-459b-85b4-993c99d5f286
+            - cdf-group: cdf:bsee:all:owner
+              idp-source-name: cdf-bsee-all-owner
+              idp-source-id: ed5a147f-8d87-4b1d-a1b7-6eb0c5a5a2b0
+              #jason
+            - cdf-group: cdf:bsee:jason:read
+              idp-source-name: cdf-bsee-jason-read
+              idp-source-id: 02986774-a591-4de5-88a8-4ceea07d2eb4
+            - cdf-group: cdf:bsee:jason:owner
+              idp-source-name: cdf-bsee-jason-owner
+              idp-source-id: a06b5bf5-2d37-4b88-a5a6-fabf98552faa
+              #kiran
+            - cdf-group: cdf:bsee:kiran:read
+              idp-source-name: cdf-bsee-kiran-read
+              idp-source-id: 3b0ba11a-9bb6-4d80-86a5-50d7579c3ecf
+            - cdf-group: cdf:bsee:kiran:owner
+              idp-source-name: cdf-bsee-kiran-owner
+              idp-source-id: 618e397b-7c63-48a3-be4f-a2cf9dc863e6
+              #hector
+            - cdf-group: cdf:bsee:hector:read
+              idp-source-name: cdf-bsee-hector-read
+              idp-source-id: c2d9ee9a-261c-4c92-85e7-83b9ee4ef86f
+            - cdf-group: cdf:bsee:hector:owner
+              idp-source-name: cdf-bsee-hector-owner
+              idp-source-id: 06d4e369-4865-498d-b7b3-6f16733689c1
+
+
+    namespaces:
+        - ns-name: timeseries
+          description: Shared preloaded timeseries data
+          ns-nodes:
+            - node-name: bsee:timeseries
+              description: ogoraA
+              
+        - ns-name: bsee
+          description: BSEE Data Sources for the Workshop
+          ns-nodes:
+            - node-name: bsee:jason
+              description: jason
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:kiran
+              description: kiran
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:hector
+              description: hector
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+
+
+              
+        # - ns-name: uc
+        #   description: Use Case for Overall Equip Effectiveness
+
+        #   # Node names will normally follow src:001:srcname or uc:001:usecasename naming convention
+        #   ns-nodes:
+        #       - node-name: uc:oee
+        #         description: OEE use case
+        #         shared-access:
+        #             read:
+        #                 - node-name: src:sap
+        #                 - node-name: src:opcua
+
+# de-facto standards for CDF CogniteClient and logger configuration.
+# Following the same parameter structure as the 'Cognite Python Extractor-Utilities'
+# and 'Cognite DB Extractor' configuration.
+cognite: # kwargs to pass to the CogniteClient, Environment variable format: ${ENVIRONMENT_VARIABLE_NAME}
+    # host: https://${BOOTSTRAP_CDF_CLUSTER}.cognitedata.com/
+    host: ${BOOTSTRAP_CDF_HOST}
+    project: ${BOOTSTRAP_CDF_PROJECT}
+    #
+    # AAD IdP login credentials:
+    #
+    idp-authentication:
+        client-id: ${BOOTSTRAP_IDP_CLIENT_ID}
+        secret: ${BOOTSTRAP_IDP_CLIENT_SECRET}
+        scopes:
+            - ${BOOTSTRAP_IDP_SCOPES}
+        token_url: ${BOOTSTRAP_IDP_TOKEN_URL}
+
+logger:
+    file:
+        path: ./logs/bootstrap-cli-logs.log
+        level: INFO
+    console:
+        level: INFO

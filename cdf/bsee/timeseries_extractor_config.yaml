@@ -1,0 +1,160 @@
+logger:
+    console:
+        level: INFO
+
+cognite:
+    # Read these from environment variables (.env)
+    host: ${BASE_URL}
+    project: ${CDF_PROJECT}
+
+    idp-authentication:
+        token-url: ${CDF_TOKEN_URL}
+        client-id: ${CLIENT_ID}
+        secret: ${CLIENT_SECRET}
+        scopes:
+            - ${BASE_URL}/.default
+
+    extraction-pipeline:
+      external-id: ${TIMESERIES_EXTRACTION_PIPELINE_EXT_ID}
+
+files:
+  - path: ./cdf/bsee/data/timeseries/ogoradelimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2022delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2021delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2020delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2019delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2018delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2017delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2016delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2015delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2014delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2013delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2012delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2011delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2010delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2009delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2008delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2007delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2006delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2005delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2004delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2003delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2002delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2001delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora2000delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora1999delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora1998delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora1997delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora
+  - path: ./cdf/bsee/data/timeseries/ogora1996delimit.txt.csv
+    key-column: NA
+    destination:
+      database: bsee:timeseries:rawdb
+      table: ogora

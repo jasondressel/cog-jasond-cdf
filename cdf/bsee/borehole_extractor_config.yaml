@@ -1,0 +1,25 @@
+logger:
+    console:
+        level: INFO
+
+cognite:
+    # Read these from environment variables (.env)
+    host: ${BASE_URL}
+    project: ${CDF_PROJECT}
+
+    idp-authentication:
+        token-url: ${CDF_TOKEN_URL}
+        client-id: ${CLIENT_ID}
+        secret: ${CLIENT_SECRET}
+        scopes:
+            - ${BASE_URL}/.default
+
+    extraction-pipeline:
+      external-id: ${BOREHOLE_EXTRACTION_PIPELINE_EXT_ID}
+
+files:
+  - path: ./cdf/bsee/data/boreholes.csv
+    key-column: API_WELL_NUMBER
+    destination:
+      database: bsee:USERNAME:rawdb
+      table: boreholes

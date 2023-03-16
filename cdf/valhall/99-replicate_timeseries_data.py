@@ -19,7 +19,7 @@ def _get_time_range(src_datapoint: Datapoints, dst_datapoint: Datapoints) -> Tup
     end_time = 0 if not src_datapoint else src_datapoint.timestamp[0] + 1
     return start_time, end_time
 
-
+# replicate point from source to target for given time period
 def replicate_historical_datapoints(
     client_src: CogniteClient,
     client_dst: CogniteClient,

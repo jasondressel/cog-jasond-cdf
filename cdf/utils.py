@@ -7,6 +7,26 @@ from dotenv import load_dotenv
 import os
 from cognite.extractorutils.uploader import RawUploadQueue
 
+def OpenAPI():
+
+    CLIENT_ID = "1b90ede3-271e-401b-81a0-a4d52bea3273"
+    CLIENT_SECRET = "jfR8Q~i.U8UktAKHKlkfCXFRb5P4zD7M8qUcpa1N"
+    TENANT_ID = "48d5043c-cf70-4c49-881c-c638f5796997"
+    CDF_CLUSTER = "api"
+    CDF_PROJECT = "publicdata"
+
+    open_api = CDFConfig(
+        client_id=CLIENT_ID,
+        client_secret=CLIENT_SECRET,
+        tenant_id=TENANT_ID,
+        cdf_cluster=CDF_CLUSTER,
+        cdf_project=CDF_PROJECT
+    )
+
+    client: CogniteClient = Client(open_api)
+    # print(client.config)
+    return client
+
 def GetClient():
     load_dotenv()
 

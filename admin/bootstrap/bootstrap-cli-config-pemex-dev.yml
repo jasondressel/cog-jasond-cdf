@@ -103,7 +103,111 @@ bootstrap:
             - cdf-group: cdf:bsee:hector:owner
               idp-source-name: cdf-bsee-hector-owner
               idp-source-id: 06d4e369-4865-498d-b7b3-6f16733689c1
-
+            # salvador's groups
+            - cdf-group: cdf:bsee:salvador:read
+              idp-source-name: cdf-bsee-salvador-read
+              idp-source-id: 0a6d0804-74f3-4616-b44c-bd1e77fb22b9
+            - cdf-group: cdf:bsee:salvador:owner
+              idp-source-name: cdf-bsee-salvador-owner
+              idp-source-id: 344bffb8-1997-4a49-bb16-6a6ce87d9cfc
+            # omar's groups
+            - cdf-group: cdf:bsee:omar:read
+              idp-source-name: cdf-bsee-omar-read
+              idp-source-id: 51150164-6a8c-41e4-9fc1-8da10f1e7d4e
+            - cdf-group: cdf:bsee:omar:owner
+              idp-source-name: cdf-bsee-omar-owner
+              idp-source-id: 2ecc04ea-bdf8-446d-9ff2-c48e08dc5f8a
+            # victor's groups
+            - cdf-group: cdf:bsee:victor:read
+              idp-source-name: cdf-bsee-victor-read
+              idp-source-id: 78ae0e08-eb69-4e93-be27-e3f658ae0cc1
+            - cdf-group: cdf:bsee:victor:owner
+              idp-source-name: cdf-bsee-victor-owner
+              idp-source-id: 189e734a-d928-41e0-9e63-26d5b87e1247
+            # luis's groups
+            - cdf-group: cdf:bsee:luis:read
+              idp-source-name: cdf-bsee-luis-read
+              idp-source-id: 123ea496-ec28-43fd-b158-a2b7c12ff90d
+            - cdf-group: cdf:bsee:luis:owner
+              idp-source-name: cdf-bsee-luis-owner
+              idp-source-id: 5c4e5e84-9bab-48c9-9297-e210b4b8fe0a
+            # otoniel's groups
+            - cdf-group: cdf:bsee:otoniel:read
+              idp-source-name: cdf-bsee-otoniel-read
+              idp-source-id: f1ec8e47-65a8-4ad0-9e91-554cec2a9fb9
+            - cdf-group: cdf:bsee:otoniel:owner
+              idp-source-name: cdf-bsee-otoniel-owner
+              idp-source-id: b0d54b72-4141-48ca-a4a2-2558c9ed8077
+            # vruiz's groups
+            - cdf-group: cdf:bsee:vruiz:read
+              idp-source-name: cdf-bsee-vruiz-read
+              idp-source-id: bf672a2a-4e27-4b1b-9c2c-fc8caac1b363
+            - cdf-group: cdf:bsee:vruiz:owner
+              idp-source-name: cdf-bsee-vruiz-owner
+              idp-source-id: 7931ea80-81af-4d2c-b297-4d94dca0be57
+            # emamani's groups
+            - cdf-group: cdf:bsee:emamani:read
+              idp-source-name: cdf-bsee-emamani-read
+              idp-source-id: 438865cb-36b9-4233-b8b5-3b67b9d1f765
+            - cdf-group: cdf:bsee:emamani:owner
+              idp-source-name: cdf-bsee-emamani-owner
+              idp-source-id: b1e7fb0a-6863-4318-9314-5b2ef45e5fa4
+            # sroque's groups
+            - cdf-group: cdf:bsee:sroque:read
+              idp-source-name: cdf-bsee-sroque-read
+              idp-source-id: 5b85a35f-7b1e-43bd-977d-8dadd28753e8
+            - cdf-group: cdf:bsee:sroque:owner
+              idp-source-name: cdf-bsee-sroque-owner
+              idp-source-id: 7ab74563-8bb5-4be5-b71d-56018056a714
+            # cespinosa's groups
+            - cdf-group: cdf:bsee:cespinosa:read
+              idp-source-name: cdf-bsee-cespinosa-read
+              idp-source-id: a209084f-7e1b-4d98-a4bd-9576265ffe61
+            - cdf-group: cdf:bsee:cespinosa:owner
+              idp-source-name: cdf-bsee-cespinosa-owner
+              idp-source-id: 87b95809-600a-477d-a768-15dd184b200e
+            # jmartinez's groups
+            - cdf-group: cdf:bsee:jmartinez:read
+              idp-source-name: cdf-bsee-jmartinez-read
+              idp-source-id: d1835802-cf15-4bea-898b-c4349267e11d
+            - cdf-group: cdf:bsee:jmartinez:owner
+              idp-source-name: cdf-bsee-jmartinez-owner
+              idp-source-id: 71e2b1ec-f3a0-469d-9e0f-0ce73a96e88f
+            # nramirez's groups
+            - cdf-group: cdf:bsee:nramirez:read
+              idp-source-name: cdf-bsee-nramirez-read
+              idp-source-id: 010e9a5f-17f1-4005-9d8a-3835f6c0a622
+            - cdf-group: cdf:bsee:nramirez:owner
+              idp-source-name: cdf-bsee-nramirez-owner
+              idp-source-id: 1dd62e02-b251-4e89-a8cd-6eba5d77a7d1
+            # svasquez's groups
+            - cdf-group: cdf:bsee:svasquez:read
+              idp-source-name: cdf-bsee-svasquez-read
+              idp-source-id: 82c446dc-961d-40c8-8cd5-ee33938c93b5
+            - cdf-group: cdf:bsee:svasquez:owner
+              idp-source-name: cdf-bsee-svasquez-owner
+              idp-source-id: 1b6fc144-313f-4172-9b5f-e721a7eb19ee
+            # mbenites's groups
+            - cdf-group: cdf:bsee:mbenites:read
+              idp-source-name: cdf-bsee-mbenites-read
+              idp-source-id: 26e6fd6f-8c62-41a3-b4b5-65c01fe63613
+            - cdf-group: cdf:bsee:mbenites:owner
+              idp-source-name: cdf-bsee-mbenites-owner
+              idp-source-id: 77b79d41-df5a-4f8a-b506-cff37442df6e
+            # ecabrera's groups
+            - cdf-group: cdf:bsee:ecabrera:read
+              idp-source-name: cdf-bsee-ecabrera-read
+              idp-source-id: 3ccc36d1-2b6e-48bb-9e7e-d1808bc58c54
+            - cdf-group: cdf:bsee:ecabrera:owner
+              idp-source-name: cdf-bsee-ecabrera-owner
+              idp-source-id: 70b25890-c2e0-4f38-8da5-7587074e8b0a
+            # frodriguez's groups
+            - cdf-group: cdf:bsee:frodriguez:read
+              idp-source-name: cdf-bsee-frodriguez-read
+              idp-source-id: 04f87cff-1a35-462d-b039-f55ff255023d
+            - cdf-group: cdf:bsee:frodriguez:owner
+              idp-source-name: cdf-bsee-frodriguez-owner
+              idp-source-id: a228dcb3-487c-438f-ac90-3bb57099cb5b
 
     namespaces:
         - ns-name: timeseries
@@ -130,7 +234,81 @@ bootstrap:
               shared-access:
                 read:
                   - node-name: bsee:timeseries
-
+            - node-name: bsee:salvador
+              description: salvador
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:omar
+              description: omar
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:victor
+              description: victor
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:luis
+              description: luis
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:otoniel
+              description: otoniel
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:vruiz
+              description: vruiz
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:emamani
+              description: emamani
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:sroque
+              description: sroque
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:cespinosa
+              description: cespinosa
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:jmartinez
+              description: jmartinez
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:nramirez
+              description: nramirez
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:svasquez
+              description: svasquez
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:mbenites
+              description: mbenites
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:ecabrera
+              description: ecabrera
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
+            - node-name: bsee:frodriguez
+              description: frodriguez
+              shared-access:
+                read:
+                  - node-name: bsee:timeseries
 
               
         # - ns-name: uc

@@ -2,9 +2,31 @@
 
 #az login --tenant $TENANT_ID --allow-no-subscriptions
 
-#az login --tenant 35be0c51-a048-4a15-9f92-33302755860f --allow-no-subscriptions
+az login --tenant 35be0c51-a048-4a15-9f92-33302755860f --allow-no-subscriptions
 
-user_names=(all jason kiran hector)
+    # all
+    # jason
+    # kiran
+    # hector  
+user_names=(
+
+    salvador
+    omar
+    victor
+    luis
+    otoniel
+    vruiz
+    emamani
+    sroque
+    cespinosa
+    jmartinez
+    nramirez
+    svasquez
+    mbenites
+    ecabrera
+    frodriguez
+)
+
 echo "${names[*]}"
 
 permissions=(read owner)

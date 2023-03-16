@@ -12,6 +12,7 @@ cognite-sdk = "^5.7.2"
 cognite-sdk-experimental = "^0.110.0"
 cognite-extractor-utils = "^4.1.0"
 cognite-wells-sdk = "^0.18.0"
+tenacity = "^8.2.2"
 
 
 [tool.poetry.group.dev.dependencies]

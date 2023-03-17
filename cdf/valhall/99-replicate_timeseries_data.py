@@ -35,7 +35,7 @@ def replicate_historical_datapoints(
     start = 1521199144000
     end = 1647429544000
     #latest_dst_dp = client_dst.datapoints.retrieve_latest(external_id=ts_external_id)
-    latest_src_dp = client_src.datapoints.retrieve_latest(external_id=ts_external_id)
+    #latest_src_dp = client_src.datapoints.retrieve_latest(external_id=ts_external_id)
 
     if not latest_src_dp:
         return ts_external_id, True, 0
@@ -52,6 +52,7 @@ def replicate_historical_datapoints(
 
     # API Restrictions
     #start = max(start, 31536000000)  # 1971
+
 
     print(f"external_id: {ts_external_id} Retrieving datapoints between {_startdt} and {_enddt}")
     datapoints_count = 0

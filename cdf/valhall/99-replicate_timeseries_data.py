@@ -29,27 +29,29 @@ def replicate_historical_datapoints(
     partition_size: int = 100000,
     start: Union[int, str] = None,
     end: Union[int, str] = None,
-    days: int = -365
+    days: int = -1825
 ) -> Tuple[str, bool, int]:
-    latest_dst_dp = client_dst.datapoints.retrieve_latest(external_id=ts_external_id)
+    
+    start = 1521199144000
+    end = 1647429544000
+    #latest_dst_dp = client_dst.datapoints.retrieve_latest(external_id=ts_external_id)
     latest_src_dp = client_src.datapoints.retrieve_latest(external_id=ts_external_id)
 
     if not latest_src_dp:
         return ts_external_id, True, 0
 
-    _start, _end = _get_time_range(latest_src_dp, latest_dst_dp)
+    #_start, _end = _get_time_range(latest_src_dp, latest_dst_dp)
 
-    start = _start if start is None else timestamp_to_ms(start)
-    end = _end if end is None else timestamp_to_ms(end)
+    #start = _start if start is None else timestamp_to_ms(start)
+    #end = _end if end is None else timestamp_to_ms(end)
 
-    # adjust start to be just 1 year historical
     _enddt = datetime.fromtimestamp(end/1000)
-    _startdt = _enddt + timedelta(days=days)
-    _start = datetime.timestamp(_startdt) * 1000
-    start = max(start, _start)
+    _startdt = datetime.fromtimestamp(start/1000)
+
+    #start = max(start, _start)
 
     # API Restrictions
-    start = max(start, 31536000000)  # 1971
+    #start = max(start, 31536000000)  # 1971
 
     print(f"external_id: {ts_external_id} Retrieving datapoints between {_startdt} and {_enddt}")
     datapoints_count = 0
